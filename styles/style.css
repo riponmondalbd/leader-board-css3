@@ -56,7 +56,6 @@ hr{
 }
 .blog{
     display: flex;
-    align-items: center;
 }
 .blog-info{
     margin-left: 16px;
@@ -115,4 +114,39 @@ hr{
 }
 .fa-star.empty{
     color: #AEAEAE;;
+}
+/* Media Queries */
+
+/* Mobile Devices */
+
+@media only screen and (max-width:688px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blogs h3{
+        width: 100%;
+    }
+    .player, .blog{
+        flex-direction: column;
+    }
+
+}
+
+/* Tablet Devices */
+@media only screen and (min-width: 688px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+    .players, .courses{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blogs h3 {
+            width: 100%;
+    }
 }
